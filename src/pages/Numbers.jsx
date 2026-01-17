@@ -20,4 +20,4 @@ export default function Numbers() {
             )}
         </div>
     );
-}
+}//daily practice
