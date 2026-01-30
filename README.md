@@ -8,9 +8,9 @@ A small React project to practice **React Router**, component structure, and cor
 - Pages structure: `Home`, `About`, `Contact`, `Numbers`
 - Reusable `Navbar` component
 - **Numbers page**:
-  - Toggle to show only even numbers
-  - Array methods practice: `map`, `filter`, `reduce`
-  - Memoization practice with `useMemo` for derived data
+ - Toggle to show only even numbers
+ - Array methods practice: `map`, `filter`, `reduce`
+ - Memoization practice with `useMemo` for derived data
 
 ## Tech Stack
 
@@ -19,4 +19,3 @@ A small React project to practice **React Router**, component structure, and cor
 - JavaScript (ES6+)
 - CSS
 
-## Folder Structure
