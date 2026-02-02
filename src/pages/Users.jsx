@@ -20,8 +20,9 @@ export default function Users() {
         }
         fetchUsers()
     }, []);
+    const normalizedSearch = searchTerm.trim().toLowerCase();
     const filteredUsers = users.filter((user) =>
-        user.name.toLowerCase().includes(searchTerm.toLowerCase())
+        user.name.toLowerCase().includes(normalizedSearch)
     );
     const sortedUsers = [...filteredUsers].sort((a, b) => {
         if (sortOrder === "asc") return a.name.localeCompare(b.name);
@@ -52,7 +53,7 @@ export default function Users() {
                 ) : (
                     <ul>
                         {sortedUsers.map((user) => (
-                            <li key={user.id}>{user.name} </li>
+                            <li key={user.id}>{user.email} </li>
                         ))}
                     </ul>)
             )}
