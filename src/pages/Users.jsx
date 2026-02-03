@@ -20,18 +20,24 @@ export default function Users() {
         }
         fetchUsers()
     }, []);
-    const normalizedSearch = searchTerm.trim().toLowerCase();
+    const normalize = (text) => text.trim().toLowerCase();
+    const sortByName = (list, order) => {
+        return [...list].sort((a, b) => {
+            if (order === "asc") return a.name.localeCompare(b.name);
+            return b.name.localeCompare(a.name);
+        });
+    };
+    const normalizedSearch = normalize(searchTerm);
     const filteredUsers = users.filter((user) =>
-        user.name.toLowerCase().includes(normalizedSearch)
+        user.name.includes(normalizedSearch)
     );
-    const sortedUsers = [...filteredUsers].sort((a, b) => {
-        if (sortOrder === "asc") return a.name.localeCompare(b.name);
-        return b.name.localeCompare(a.name);
-    })
+    const sortedUsers = sortByName(filteredUsers, sortOrder);
+
 
     return (
         <div style={{ padding: 20 }} >
             <h2>Users</h2>
+            <p style={{ marginBottom: 8 }}>Search by name</p>
             <input
                 type="text"
                 placeholder="Search users..."
@@ -53,7 +59,7 @@ export default function Users() {
                 ) : (
                     <ul>
                         {sortedUsers.map((user) => (
-                            <li key={user.id}>{user.email} </li>
+                            <li key={user.id}><strong>{user.name} </strong> - {user.email} </li>
                         ))}
                     </ul>)
             )}
