@@ -14,7 +14,7 @@ A small React project to practice **React Router**, component structure, and cor
 
 ## Tech Stack
 
-- React
+- React 
 - React Router
 - JavaScript (ES6+)
 - CSS
