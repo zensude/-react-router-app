@@ -1,18 +1,18 @@
-# React Router Practice App
+ React Router Practice App
 
-A small React project to practice **React Router**, component structure, and core React/JavaScript concepts with real pages.
+A small React project to practice React Router, component structure, and core React/JavaScript concepts with real pages.
 
-## Features
+ Features
 
-- **SPA navigation** with React Router (no full page reload)
+- SPA navigation with React Router (no full page reload)
 - Pages structure: Home, About, Contact, Numbers
 - Reusable Navbar component
-- **Numbers page**:
+- Numbers page:
  - Toggle to show only even numbers
  - Array methods practice: map, filter, reduce
  - Memoization practice with useMemo for derived data
 
-## Tech Stack
+Tech Stack
 
 - React 
 - React Router
