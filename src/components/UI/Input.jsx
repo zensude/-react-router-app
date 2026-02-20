@@ -9,4 +9,4 @@ export default function Input({ value, onChange, placeholder, type = "text" }) {
             placeholder={placeholder}
         />
     );
-}
+} 

@@ -7,19 +7,36 @@ import Navbar from "./components/Navbar";
 import Numbers from "./pages/Numbers";
 import Users from "./pages/Users";
 
+// export default function App() {
+//     return (
+//         <div>
+//             <Navbar />
+
+
+//             <Routes>
+//                 <Route path="/" element={<Home />} />
+//                 <Route path="/about" element={<About />} />
+//                 <Route path="/contact" element={<Contact />} />
+//                 <Route path="/numbers" element={<Numbers />} />
+//                 <Route path="/users" element={<Users />} />
+//             </Routes>
+//         </div>
+//     );
+// }
 export default function App() {
     return (
-        <div>
+        <div className="app">
             <Navbar />
 
-
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/numbers" element={<Numbers />} />
-                <Route path="/users" element={<Users />} />
-            </Routes>
+            <main className="main-content">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/numbers" element={<Numbers />} />
+                    <Route path="/users" element={<Users />} />
+                </Routes>
+            </main>
         </div>
     );
 }

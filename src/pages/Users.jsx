@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Input from "../components/UI/Input";
 export default function Users() {
     const [users, setUsers] = useState([]);
     const [status, setStatus] = useState("loading");
@@ -38,11 +39,11 @@ export default function Users() {
         <div style={{ padding: 20 }} >
             <h2>Users</h2>
             <p style={{ marginBottom: 8 }}>Search by name</p>
-            <input
-                type="text"
+            <Input
                 placeholder="Search users..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)} />
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
             <select
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value)}
