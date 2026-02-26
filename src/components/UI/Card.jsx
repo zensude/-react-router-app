@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Card() {
+export default function Card({ children }) {
     return (
-        <div>Card</div>
-    )
+        <div className="card">
+            {children}
+        </div>
+    );
 }
-
-export default Card
