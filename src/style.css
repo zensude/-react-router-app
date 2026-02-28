@@ -116,7 +116,7 @@ button:focus-visible {
 }
 
 .card {
-  background: white;
+  background: rgb(193, 191, 191);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);

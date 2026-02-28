@@ -73,6 +73,7 @@
 
 import React, { useEffect, useState } from "react";
 import Input from "../components/UI/Input";
+import Card from "../components/UI/Card";
 
 export default function Users() {
     const [users, setUsers] = useState([]);
@@ -150,13 +151,21 @@ export default function Users() {
             {sortedUsers.length === 0 ? (
                 <p style={{ marginTop: 12 }}>No users found.</p>
             ) : (
-                <ul>
+                // <ul>
+                //     {sortedUsers.map((user) => (
+                //         <li key={user.id}>
+                //             <strong>{user.name}</strong> - {user.email}
+                //         </li>
+                //     ))}
+                // </ul>
+                <div style={{ marginTop: 12 }}>
                     {sortedUsers.map((user) => (
-                        <li key={user.id}>
-                            <strong>{user.name}</strong> - {user.email}
-                        </li>
+                        <Card key={user.id}>
+                            <strong>{user.name}</strong>
+                            <p>{user.email}</p>
+                        </Card>
                     ))}
-                </ul>
+                </div>
             )}
         </div>
     );
