@@ -120,7 +120,8 @@ export default function Users() {
     const normalizedSearch = normalize(searchTerm);
 
     const filteredUsers = users.filter((user) =>
-        user.name.toLowerCase().includes(normalizedSearch)
+        user.name.toLowerCase().includes(normalizedSearch) ||
+        user.email.toLowerCase().includes(normalizedSearch)
     );
 
     const sortedUsers = sortByName(filteredUsers, sortOrder);
