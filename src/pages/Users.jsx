@@ -132,6 +132,11 @@ export default function Users() {
     return (
         <div style={{ padding: 20 }}>
             <h2>Users</h2>
+
+            {sortedUsers.length > 0 && (
+                <p style={{ marginTop: 4 }}>{sortedUsers.length} users found</p>
+            )}
+
             <p style={{ marginBottom: 8 }}>Search by name</p>
 
             <Input
