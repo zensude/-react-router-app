@@ -148,10 +148,12 @@ export default function Users() {
             <select
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value)}
-                style={{ marginLeft: 10 }}
-            >
-                <option value="asc">A-Z</option>
-                <option value="desc">Z-A</option>
+                style={{ marginLeft: 10 }}>
+                {/* <option value="asc">A-Z</option>
+                <option value="desc">Z-A</option> */}
+                <option value="asc">Name A-Z</option>
+                <option value="desc">Name Z-A</option>
+                <option value="email">Email A-Z</option>
             </select>
 
             {sortedUsers.length === 0 ? (
